@@ -1,0 +1,12 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    color: $red-basic;
+    ul {
+        display: flex;
+        align-items: center;
+        li {
+            margin: 5px;
+        }
+    }
+}

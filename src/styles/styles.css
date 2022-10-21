@@ -1,3 +1,4 @@
+/* Colors */
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +11,21 @@ a {
 }
 
 body {
-  max-width: 1240px;
+  max-width: 375px;
   margin: auto;
+  padding: 10px;
+  border: 2px solid gray;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  color: #FF6060;
+}
+header ul {
+  display: flex;
+  align-items: center;
+}
+header ul li {
+  margin: 5px;
 }/*# sourceMappingURL=styles.css.map */
