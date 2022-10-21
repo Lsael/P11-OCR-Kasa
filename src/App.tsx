@@ -1,9 +1,9 @@
-
+import Header from "./components/header";
 
 const App = () => {
   return (
     <div className="App">
-      <p>Hello World !</p>
+      <Header />
     </div>
   );
 }
