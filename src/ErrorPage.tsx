@@ -1,12 +1,5 @@
 import { useRouteError } from "react-router-dom";
 
-/* interface errorObject {
-  data: string | null,
-  status: number | null,
-  statusText: string | null,
-  message: string | null
-} */
-
 export const ErrorPage = () => {
   const error:any = useRouteError();
   console.error(error);
@@ -15,7 +8,7 @@ export const ErrorPage = () => {
       return (
         <div id="error-page">
           <h1>404</h1>
-          <p>Oups, cette page n'existe pas !</p>
+          <p>Oups! La page que vous demandez n'existe pas !</p>
         </div>
       );
   } else {

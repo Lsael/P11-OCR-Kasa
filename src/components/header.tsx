@@ -5,8 +5,8 @@ const Header = () => {
         <header>
             <img src={mainLogo} alt="Logo Kasa" />
             <ul>
-                <li>Accueil</li>
-                <li>A propos</li>
+                <li><a href='/accueil'>Accueil</a></li>
+                <li><a href='/a-propos'>A propos</a></li>
             </ul>
         </header>
     )

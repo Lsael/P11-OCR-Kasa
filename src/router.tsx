@@ -1,11 +1,31 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { ErrorPage } from './ErrorPage';
 import App from './App';
+import Home from './pages/Home'
+import About from './pages/About';
+import Lodging from './pages/Lodging';
 
 export const router = createBrowserRouter([
     {
       path: "/",
       element: <App />,
-      errorElement: <ErrorPage />
+      errorElement: <ErrorPage />,
+      children : [
+        {
+          path: "/accueil",
+          element: <Home />,
+          errorElement: <ErrorPage />
+        },
+        {
+          path: "/logements/:id",
+          element: <Lodging />,
+          errorElement: <ErrorPage />
+        },
+        {
+          path: "/a-propos",
+          element: <About />,
+          errorElement: <ErrorPage />
+        },
+      ]
     },
   ]);
