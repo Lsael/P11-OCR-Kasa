@@ -29,6 +29,6 @@ header ul {
 header ul li {
   margin: 5px;
 }
-header ul li:first-child {
+header ul .active {
   text-decoration: underline;
 }/*# sourceMappingURL=styles.css.map */

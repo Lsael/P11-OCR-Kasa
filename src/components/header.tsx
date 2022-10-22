@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom'
 import mainLogo from '../assets/.LOGO.png'
 
 const Header = () => {
@@ -5,8 +6,8 @@ const Header = () => {
         <header>
             <img src={mainLogo} alt="Logo Kasa" />
             <ul>
-                <li><a href='/accueil'>Accueil</a></li>
-                <li><a href='/a-propos'>A propos</a></li>
+                <li><NavLink to='/accueil'className={({ isActive, isPending }) => isActive ? 'active' : ''}>Accueil</NavLink></li>
+                <li><NavLink to='/a-propos' className={({ isActive, isPending }) => isActive ? 'active' : ''}>A propos</NavLink></li>
             </ul>
         </header>
     )

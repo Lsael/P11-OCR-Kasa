@@ -7,9 +7,9 @@ header {
         align-items: center;
         li {
             margin: 5px;
-            &:first-child {
-                text-decoration: underline;
-            }
+        }
+        .active {
+            text-decoration: underline;
         }
     }
 }
