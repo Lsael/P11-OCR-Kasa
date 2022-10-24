@@ -6,8 +6,8 @@ const Header = () => {
         <header>
             <img src={mainLogo} alt="Logo Kasa" />
             <ul>
-                <li><NavLink to='/accueil'className={({ isActive, isPending }) => isActive ? 'active' : ''}>Accueil</NavLink></li>
-                <li><NavLink to='/a-propos' className={({ isActive, isPending }) => isActive ? 'active' : ''}>A propos</NavLink></li>
+                <li><NavLink to='/accueil'className={({ isActive }) => isActive ? 'active' : ''}>Accueil</NavLink></li>
+                <li><NavLink to='/a-propos' className={({ isActive }) => isActive ? 'active' : ''}>A propos</NavLink></li>
             </ul>
         </header>
     )
