@@ -18,6 +18,12 @@ body {
   border: 2px solid gray;
 }
 
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -66,7 +72,27 @@ header ul .active {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: gray;
+  background-color: black;
   opacity: 0.3;
   z-index: -1;
+}
+
+.Thumb {
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+  width: 90%;
+  background: #FF6060;
+  margin: 10px auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.Thumb img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 80%;
+}
+.Thumb h3 {
+  color: white;
+  padding: 10px;
 }/*# sourceMappingURL=styles.css.map */
