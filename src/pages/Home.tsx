@@ -11,10 +11,12 @@ const Home = () => {
       {
         products.map((product) => {
           return(
-            <article className='Thumb'>
-              <img src={product.cover} alt={product.title} />
-              <h3>{product.title}</h3>
-            </article>
+            <a href={`/logements/${product.id}`} className='Thumb'>
+              <article>
+                  <img src={product.cover} alt={product.title} />
+                  <h3>{product.title}</h3>
+              </article>
+            </a>
           )
         })
       }
