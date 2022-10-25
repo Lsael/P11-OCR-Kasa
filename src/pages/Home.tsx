@@ -1,5 +1,6 @@
 import products from '../database/db.json';
 import homeBanner from '../assets/home-banner.png'
+import Thumbnail from '../components/Thumbnail';
 
 const Home = () => {
   return (
@@ -9,14 +10,9 @@ const Home = () => {
         <h2>Chez vous,<br/> partout et ailleurs</h2>
       </div>
       {
-        products.map((product) => {
+        products.map((productDatas) => {
           return(
-            <a href={`/logements/${product.id}`} className='Thumb'>
-              <article>
-                  <img src={product.cover} alt={product.title} />
-                  <h3>{product.title}</h3>
-              </article>
-            </a>
+            <Thumbnail {...productDatas} key={productDatas.id} />
           )
         })
       }
