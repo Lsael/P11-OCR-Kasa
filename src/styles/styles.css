@@ -112,4 +112,15 @@ header ul .active {
   color: white;
   position: absolute;
   padding: 10px;
+}
+
+.slider {
+  width: 100%;
+  height: 60vh;
+}
+.slider img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
 }/*# sourceMappingURL=styles.css.map */

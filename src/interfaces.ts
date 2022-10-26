@@ -1,5 +1,5 @@
 
-/* export interface productDatas {
+export interface productDatas {
     cover: string,
     description: string,
     equipments: string[] | string | null,
@@ -13,10 +13,12 @@
     rating: string,
     tags: string[] | null,
     title: string
-} */
+}
 
 export interface homeThumbDatas {
     cover: string,
     id: string,
     title: string
 }
+
+

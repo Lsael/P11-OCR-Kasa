@@ -1,5 +1,5 @@
+import Slider from '../components/Slider';
 import products from '../database/db.json';
-
 
 const Lodging = () => {
     const id = window.location.href.split('/logements/')[1];
@@ -10,9 +10,12 @@ const Lodging = () => {
             product = products[i]
         }
     }
-    console.log(product);
+
     return(
-        <div>Le logement que je consulte a l'id : {product?.id} </div>
+        <div>
+            <p>Le logement que je consulte a l'id : {product?.id}</p> 
+            <Slider images={product?.pictures} />
+        </div>
     )
 }
 
