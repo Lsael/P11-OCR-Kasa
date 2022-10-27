@@ -52,6 +52,39 @@ h1, h2 {
   white-space: nowrap;
   border-radius: 8px;
 }
+.productPage__rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px auto;
+}
+.productPage__rating .star {
+  width: 18px;
+  height: 18px;
+}
+.productPage__rating .host {
+  display: flex;
+  align-items: center;
+  max-width: 30%;
+  margin: 15px 0;
+}
+.productPage__rating .host img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+.productPage__rating .host span {
+  text-align: end;
+  margin-right: 10px;
+  font-size: 12px;
+  line-height: 140%;
+  font-weight: 600;
+}
+.switchBar {
+  background-color: #FF6060;
+  display: flex;
+  color: white;
+}
 
 header {
   display: flex;

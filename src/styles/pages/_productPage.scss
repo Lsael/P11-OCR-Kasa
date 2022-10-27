@@ -21,4 +21,40 @@
             border-radius: 8px;
         }
     }
+    &__rating {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 5px auto;
+        .star {
+            width: 18px;
+            height: 18px;
+        }
+        .host {
+            display: flex;
+            align-items: center;
+            max-width: 30%;
+            margin: 15px 0;
+            img {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+            }
+            span {
+                text-align: end;
+                margin-right: 10px;
+                font-size: 12px;
+                line-height: 140%;
+                font-weight: 600;
+            }
+        }
+    }
+    &__equipments {
+    }
+}
+
+.switchBar {
+    background-color: $red-basic;
+    display: flex;
+    color: white;
 }

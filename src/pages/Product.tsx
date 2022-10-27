@@ -5,6 +5,15 @@ import arrow from '../assets/arrow_back_ios-24px 2.png'
 import fullStar from '../assets/star_rate-24px 5.svg'
 import emptyStar from '../assets/star_rate-24px 2.svg'
 
+const SwitchBar = ({ title }: { title: string }) => {
+    return(
+        <div className="switchBar">
+            <h2>{title}</h2>
+            <img src={arrow} alt="" className={"arrow arrow__" + title} />
+        </div>
+    )
+}
+
 const Lodging = () => {
     const id = window.location.href.split('/logements/')[1];
     let product!:productDatas;
@@ -27,15 +36,15 @@ const Lodging = () => {
                     )
                 })}
             </div>
-            <div>
-                <div className='productPage__rating'>
+            <div className='productPage__rating'>
+                <div>
                 {[...Array(parseInt(product.rating))].map(() => {
                     return(
-                        <img src={fullStar} alt='' />
+                        <img src={fullStar} alt='' className='star' />
                     )})}
                 {[...Array(5 - parseInt(product.rating))].map(() => {
                     return(
-                        <img src={emptyStar} alt='' />
+                        <img src={emptyStar} alt='' className='star' />
                     )})}
                 </div>
                 <div className="host">
@@ -44,15 +53,11 @@ const Lodging = () => {
                 </div>
             </div>
             <div className="productPage__description">
-                <h2>Description</h2>
-                <img src={arrow} alt="" className='arrow arrow__top' />
-                <img src={arrow} alt="" className='arrow arrow__bot' />
+                <SwitchBar title='Description' />
                 <p>{product.description}</p>
             </div>
             <div className="productPage__equipments">
-                <h2>Équipements</h2>
-                <img src={arrow} alt="" className='arrow arrow__top' />
-                <img src={arrow} alt="" className='arrow arrow__bot' />
+                <SwitchBar title='Équipements' />
                 <ul className='equipments__list'>{
                 product.equipments.map((equipment) => {
                     return(
@@ -64,5 +69,6 @@ const Lodging = () => {
         </section>
     )
 }
+
 
 export default Lodging
