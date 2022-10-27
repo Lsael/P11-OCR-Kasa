@@ -1,0 +1,24 @@
+
+.productPage {
+    &__title {
+        h1 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 5px auto;
+        }
+        p {
+            font-size: 14px;
+            font-weight: 600;
+            margin: 5px auto;
+        }
+        .tagBox {
+            color: white;
+            background-color: $red-basic;
+            font-size: 10px;
+            margin: 8px 5px 8px 0;
+            padding: 5px 15px;
+            white-space: nowrap;
+            border-radius: 8px;
+        }
+    }
+}

@@ -13,7 +13,13 @@ a {
 body {
     max-width: 375px;
     margin: auto;
-    padding: 10px;
+    padding: 20px;
     border: 2px solid gray;
     font-family: $monserrat;
+    color: $red-basic;
+    line-height: 140%;
+}
+
+h1,h2 {
+    font-weight: 400;
 }

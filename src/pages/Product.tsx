@@ -1,7 +1,9 @@
 import Slider from '../components/Slider';
 import products from '../database/db.json';
-import arrow from '../assets/arrow_back_ios-24px 2.png'
 import { productDatas } from '../interfaces';
+import arrow from '../assets/arrow_back_ios-24px 2.png'
+import fullStar from '../assets/star_rate-24px 5.svg'
+import emptyStar from '../assets/star_rate-24px 2.svg'
 
 const Lodging = () => {
     const id = window.location.href.split('/logements/')[1];
@@ -12,7 +14,7 @@ const Lodging = () => {
             product = products[i]
         }
     }
-
+    
     return(
         <section>
             <Slider images={product.pictures} />
@@ -26,7 +28,16 @@ const Lodging = () => {
                 })}
             </div>
             <div>
-                <div className='productPage__rating'>{product.rating}</div>
+                <div className='productPage__rating'>
+                {[...Array(parseInt(product.rating))].map(() => {
+                    return(
+                        <img src={fullStar} alt='' />
+                    )})}
+                {[...Array(5 - parseInt(product.rating))].map(() => {
+                    return(
+                        <img src={emptyStar} alt='' />
+                    )})}
+                </div>
                 <div className="host">
                     <span>{product.host.name}</span>
                     <img src={product.host.picture} alt={product.host.name} />
@@ -42,7 +53,7 @@ const Lodging = () => {
                 <h2>Équipements</h2>
                 <img src={arrow} alt="" className='arrow arrow__top' />
                 <img src={arrow} alt="" className='arrow arrow__bot' />
-                <ul>{
+                <ul className='equipments__list'>{
                 product.equipments.map((equipment) => {
                     return(
                         <li>{equipment}</li>
