@@ -35,11 +35,13 @@ const Lodging = () => {
             <div className="productPage__description">
                 <h2>Description</h2>
                 <img src={arrow} alt="" className='arrow arrow__top' />
+                <img src={arrow} alt="" className='arrow arrow__bot' />
                 <p>{product.description}</p>
             </div>
             <div className="productPage__equipments">
                 <h2>Équipements</h2>
                 <img src={arrow} alt="" className='arrow arrow__top' />
+                <img src={arrow} alt="" className='arrow arrow__bot' />
                 <ul>{
                 product.equipments.map((equipment) => {
                     return(

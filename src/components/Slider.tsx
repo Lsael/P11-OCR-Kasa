@@ -3,15 +3,29 @@ import arrow from '../assets/arrow_back_ios-24px 2.png';
 
 const Slider = (images:any) => {
     const [imageIndex,setImageIndex] = useState(0);
-    const slide = () => {
-        setImageIndex(imageIndex + 1)
+    const covers:string[] = images.images;
+    
+    const slideLeft = () => {
+        if(imageIndex > 0) {
+            setImageIndex(imageIndex - 1)
+        } else {
+            setImageIndex(covers.length - 1)
+        }
+    }
+
+    const slideRight = () => {
+        if(imageIndex < (covers.length - 1)) {
+            setImageIndex(imageIndex + 1)
+        } else {
+            setImageIndex(0)
+        }
     }
 
     return(
         <div className="slider">
-            <img src={images.images[imageIndex]} alt="logement" onClick={() => slide()}/>
-            <img src={arrow} alt="" className='arrow arrow__left' />
-            <img src={arrow} alt="" className='arrow arrow__right' />
+            <img src={covers[imageIndex]} alt="logement" />
+            <img src={arrow} alt="" className='arrow arrow__left' onClick={() => slideLeft()}/>
+            <img src={arrow} alt="" className='arrow arrow__right' onClick={() => slideRight()}/>
         </div>
     )
 }

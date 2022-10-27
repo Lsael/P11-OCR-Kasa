@@ -2,6 +2,9 @@
     width: 100%;
     height: 60vh;
     position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
     img:first-child {
         object-fit:cover;
         width: 100%;
@@ -11,13 +14,12 @@
 }
 
 .arrow {
-    border: 2px solid gray;
-    position: relative;
-    top: 50%;
+    cursor: pointer;
     &__left {
         transform: rotate(90deg);
     }
     &__right {
         transform: rotate(270deg);
+        justify-self: flex-end;
     }
 }
