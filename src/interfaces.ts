@@ -2,16 +2,16 @@
 export interface productDatas {
     cover: string,
     description: string,
-    equipments: string[] | string | null,
+    equipments: string[],
     host: {
         name: string,
-        picture: string | null, 
+        picture: string, 
     },
     id: string,
     location: string
     pictures: string[],
     rating: string,
-    tags: string[] | null,
+    tags: string[],
     title: string
 }
 
