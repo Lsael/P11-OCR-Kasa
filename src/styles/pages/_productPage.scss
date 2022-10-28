@@ -39,6 +39,7 @@
                 width: 32px;
                 height: 32px;
                 border-radius: 50%;
+                object-fit: cover;
             }
             span {
                 text-align: end;
@@ -57,4 +58,8 @@
     background-color: $red-basic;
     display: flex;
     color: white;
+}
+
+.arrow_Description < div .box {
+    color: black;
 }
