@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import arrow from '../assets/arrow_back_ios-24px 2.png'
 import fullStar from '../assets/star_rate-24px 5.svg'
 import emptyStar from '../assets/star_rate-24px 2.svg'
+import Layout from './Layout';
 
 const SwitchBar = ({ title }: { title: string }) => {
     const [arrowState, setArrowState] = useState(false);
@@ -42,48 +43,50 @@ const Lodging = () => {
     }
     
     return(
-        <section>
-            <Slider images={product.pictures} />
-            <div className="productPage__title">
-                <h1>{product.title}</h1>
-                <p>{product.location}</p>
-                {product.tags.map((tag,index) => {
-                    return(
-                        <span key={index} className='tagBox'>{tag}</span>
-                    )
-                })}
-            </div>
-            <div className='productPage__rating'>
-                <div>
-                {[...Array(parseInt(product.rating))].map((data,index) => {
-                    return(
-                        <img key={index} src={fullStar} alt='' className='star' />
-                    )})}
-                {[...Array(5 - parseInt(product.rating))].map((data,index) => {
-                    return(
-                        <img key={index} src={emptyStar} alt='' className='star' />
-                    )})}
+        <Layout>
+            <section>
+                <Slider images={product.pictures} />
+                <div className="productPage__title">
+                    <h1>{product.title}</h1>
+                    <p>{product.location}</p>
+                    {product.tags.map((tag,index) => {
+                        return(
+                            <span key={index} className='tagBox'>{tag}</span>
+                        )
+                    })}
                 </div>
-                <div className="host">
-                    <span>{product.host.name}</span>
-                    <img src={product.host.picture} alt={product.host.name} />
+                <div className='productPage__rating'>
+                    <div>
+                    {[...Array(parseInt(product.rating))].map((data,index) => {
+                        return(
+                            <img key={index} src={fullStar} alt='' className='star' />
+                        )})}
+                    {[...Array(5 - parseInt(product.rating))].map((data,index) => {
+                        return(
+                            <img key={index} src={emptyStar} alt='' className='star' />
+                        )})}
+                    </div>
+                    <div className="host">
+                        <span>{product.host.name}</span>
+                        <img src={product.host.picture} alt={product.host.name} />
+                    </div>
                 </div>
-            </div>
-            <div className="productPage__description">
-                <SwitchBar title='Description' />
-                <p className='box'>{product.description}</p>
-            </div>
-            <div className="productPage__equipments">
-                <SwitchBar title='Équipements' />
-                <ul className={'equipments__list box'}>{
-                product.equipments.map((equipment,index) => {
-                    return(
-                        <li key={index}>{equipment}</li>
-                    )
-                })}
-                </ul>
-            </div>
-        </section>
+                <div className="productPage__description">
+                    <SwitchBar title='Description' />
+                    <p className='box'>{product.description}</p>
+                </div>
+                <div className="productPage__equipments">
+                    <SwitchBar title='Équipements' />
+                    <ul className={'equipments__list box'}>{
+                    product.equipments.map((equipment,index) => {
+                        return(
+                            <li key={index}>{equipment}</li>
+                        )
+                    })}
+                    </ul>
+                </div>
+            </section>
+        </Layout>
     )
 }
 

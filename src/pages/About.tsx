@@ -1,7 +1,10 @@
+import Layout from "./Layout"
 
 const About = () => {
     return (
-      <div>Ma page d'à propos</div>
+      <Layout>
+        <div>Ma page d'à propos</div>
+      </Layout>
     )
   }
   
