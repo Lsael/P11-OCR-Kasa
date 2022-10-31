@@ -9,12 +9,11 @@ export const router = createBrowserRouter([
       path: "/",
       element: <Home />,
       errorElement: <ErrorPage />,
-      index: true,
     },
     {
       path: "accueil",
       element: <Home />,
-      errorElement: <ErrorPage />
+      errorElement: <ErrorPage />,
     },
     {
       path: "logements/:id",

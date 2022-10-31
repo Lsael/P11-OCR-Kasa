@@ -1,9 +1,11 @@
+import logoFooter from '../assets/LOGO-footer.svg'
 
 const Footer = () => {
     return(
-        <div className="footer">
-            
-        </div>
+        <footer>
+            <img src={logoFooter} alt="Logo Kasa" />
+            <span>© 2020 Kasa. All rights reserved</span>
+        </footer>
     )
 }
 

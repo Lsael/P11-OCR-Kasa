@@ -21,6 +21,7 @@ body {
   font-family: "Montserrat", sans-serif;
   color: #FF6060;
   line-height: 140%;
+  position: relative;
 }
 
 h1, h2 {
@@ -82,20 +83,23 @@ h1, h2 {
   line-height: 140%;
   font-weight: 600;
 }
+
 .switchBar {
   background-color: #FF6060;
   display: flex;
   color: white;
-}
-
-.arrow_Description > div .box {
-  color: black;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  padding: 5px 10px;
+  margin: 15px auto 20px;
 }
 
 header {
   display: flex;
   justify-content: space-between;
-  color: #FF6060;
 }
 header ul {
   display: flex;
@@ -108,6 +112,20 @@ header ul li {
 }
 header ul .active {
   text-decoration: underline;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  height: 200px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 
 .home__banner {
