@@ -7,25 +7,25 @@ import fullStar from '../assets/star_rate-24px 5.svg'
 import emptyStar from '../assets/star_rate-24px 2.svg'
 import Layout from './Layout';
 
-const SwitchBar = ({ title }: { title: string }) => {
+const SwitchBox = ({ title }: { title: string }) => {
     const [arrowState, setArrowState] = useState(false);
     const switchOnClick = () => {
         setArrowState(arrowState ? false : true) 
     } 
     useEffect(() => {
-        const icone:HTMLElement = document.querySelector(".arrow__" + title)!
-/*         const box:HTMLElement = document.querySelector(".arrow__" + title + "~ .box")! */
+        const icone:HTMLElement = document.querySelector(".switchBox__" + title + "> img")!
+        const box:HTMLElement = document.querySelector(".switchBox__" + title + "+ .box")!
         if(arrowState === true) {
             icone.style.transform = "rotate(0deg)";
-/*             box.style.visibility = "visible"; */
+            box.style.visibility = "visible";
         } else {
             icone.style.transform = "rotate(180deg)";
-/*             box.style.visibility = "hidden"; */
+            box.style.visibility = "hidden";
         }
     }, [arrowState, title])
 
     return(
-        <div className="switchBar">
+        <div className={"switchBox switchBox__" + title}>
             <h2>{title}</h2>
             <img src={arrow} alt="" className={"arrow arrow__" + title} onClick={switchOnClick} />
         </div>
@@ -72,12 +72,12 @@ const Lodging = () => {
                     </div>
                 </div>
                 <div className="productPage__description">
-                    <SwitchBar title='Description' />
+                    <SwitchBox title='Description' />
                     <p className='box'>{product.description}</p>
                 </div>
                 <div className="productPage__equipments">
-                    <SwitchBar title='Équipements' />
-                    <ul className={'equipments__list box'}>{
+                    <SwitchBox title='Équipements' />
+                    <ul className='equipments__list box'>{
                     product.equipments.map((equipment,index) => {
                         return(
                             <li key={index}>{equipment}</li>
