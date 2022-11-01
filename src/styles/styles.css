@@ -84,17 +84,8 @@ h1, h2 {
   font-weight: 600;
 }
 
-.switchBox {
-  background-color: #FF6060;
-  display: flex;
-  color: white;
-  border-radius: 5px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 13px;
-  padding: 5px 10px;
-  margin: 15px auto 20px;
+.boxDiv {
+  margin-bottom: 20px;
 }
 
 header {
@@ -227,4 +218,22 @@ footer {
 .arrow__right {
   transform: rotate(270deg);
   justify-self: flex-end;
+}
+
+.switchBar {
+  background-color: #FF6060;
+  display: flex;
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  padding: 5px 10px;
+}
+
+.box {
+  background-color: #F6F6F6;
+  padding: 12px;
+  border-radius: 5px;
 }/*# sourceMappingURL=styles.css.map */
