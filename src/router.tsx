@@ -1,5 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom';
-import { ErrorPage } from './ErrorPage';
+import { ErrorPage } from './pages/ErrorPage';
 import Home from './pages/Home'
 import About from './pages/About';
 import Lodging from './pages/Product';

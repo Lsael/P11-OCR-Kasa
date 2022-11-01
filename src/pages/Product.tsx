@@ -1,40 +1,10 @@
 import Slider from '../components/Slider';
 import products from '../database/db.json';
 import { productDatas } from '../interfaces';
-import { useEffect, useState } from 'react';
-import arrow from '../assets/arrow_back_ios-24px 2.png'
 import fullStar from '../assets/star_rate-24px 5.svg'
 import emptyStar from '../assets/star_rate-24px 2.svg'
 import Layout from './Layout';
-
-const SwitchBar = ({ title }: { title: string }) => {
-    const [arrowState, setArrowState] = useState(false);
-    const switchOnClick = () => {
-        setArrowState(arrowState ? false : true) 
-    } 
-    useEffect(() => {
-        const icone:HTMLElement = document.querySelector(".switchBar__" + title + "> img")!
-        const box:HTMLElement = document.querySelector(".switchBar__" + title + "+ .box")!
-        if(arrowState === true) {
-            icone.style.transform = "rotate(0deg)";
-            box.style.display = "none"
-/*             box.style.transform = "translate(0,-1000%)";
-            box.style.opacity = "0"; */
-        } else {
-            icone.style.transform = "rotate(180deg)";
-            box.style.display = "block"
-/*             box.style.transform = "translate(0,0)";
-            box.style.opacity = "1"; */
-        }
-    }, [arrowState, title])
-
-    return(
-        <div className={"switchBar switchBar__" + title}>
-            <h2>{title}</h2>
-            <img src={arrow} alt="" className={"arrow arrow__" + title} onClick={switchOnClick} />
-        </div>
-    )
-}
+import SwitchBar from '../components/SwitchBar';
 
 const Lodging = () => {
     const id = window.location.href.split('/logements/')[1];
@@ -48,7 +18,7 @@ const Lodging = () => {
     
     return(
         <Layout>
-            <section>
+            <section className='product'>
                 <Slider images={product.pictures} />
                 <div className="productPage__title">
                     <h1>{product.title}</h1>
@@ -75,11 +45,11 @@ const Lodging = () => {
                         <img src={product.host.picture} alt={product.host.name} />
                     </div>
                 </div>
-                <div className="productPage__description boxDiv">
+                <div className="standard-box">
                     <SwitchBar title='Description' />
                     <p className='box'>{product.description}</p>
                 </div>
-                <div className="productPage__equipments boxDiv">
+                <div className="standard-box">
                     <SwitchBar title='Équipements' />
                     <ul className='equipments__list box'>{
                     product.equipments.map((equipment,index) => {

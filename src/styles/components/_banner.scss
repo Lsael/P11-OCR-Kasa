@@ -1,6 +1,6 @@
-.home__banner {
+.banner {
     width: 90%;
-    height: 15vh;
+    height: 40vh;
     margin: 20px auto ;
     border-radius: 10px;
     position: relative;
@@ -32,4 +32,8 @@
             z-index: -1;
         }
     }
+}
+
+.home__banner {
+    height: 15vh !important;
 }
