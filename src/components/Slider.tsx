@@ -1,7 +1,8 @@
 import { useState} from 'react';
 import arrow from '../assets/arrow_back_ios-24px 2.png';
+import { productImages } from '../interfaces';
 
-const Slider = (images:any) => {
+const Slider = (images:productImages) => {
     const [imageIndex,setImageIndex] = useState(0);
     const covers:string[] = images.images;
     

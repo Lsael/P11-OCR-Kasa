@@ -21,4 +21,7 @@ export interface homeThumbDatas {
     title: string
 }
 
+export interface productImages {
+    images: string[]
+}
 

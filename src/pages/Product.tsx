@@ -23,7 +23,7 @@ const Lodging = () => {
                 <div className="productPage__title">
                     <h1>{product.title}</h1>
                     <p>{product.location}</p>
-                    {product.tags.map((tag,index) => {
+                    {product.tags.map((tag:string,index) => {
                         return(
                             <span key={index} className='tagBox'>{tag}</span>
                         )
@@ -52,7 +52,7 @@ const Lodging = () => {
                 <div className="standard-box">
                     <SwitchBar title='Équipements' />
                     <ul className='equipments__list box'>{
-                    product.equipments.map((equipment,index) => {
+                    product.equipments.map((equipment:string,index) => {
                         return(
                             <li key={index}>{equipment}</li>
                         )

@@ -1,6 +1,5 @@
 import { homeThumbDatas } from "../interfaces";
 
-
 const Thumbnail = (productDatas:homeThumbDatas) => {
     return(
     <a href={`/logements/${productDatas.id}`} className='Thumb' >
