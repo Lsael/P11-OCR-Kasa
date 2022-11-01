@@ -84,6 +84,24 @@ h1, h2 {
   font-weight: 600;
 }
 
+.error-page {
+  width: 100%;
+  height: 80vh;
+  position: -webkit-sticky;
+  position: sticky;
+  display: grid;
+  align-items: center;
+  text-align: center;
+}
+.error-page h1 {
+  font-size: 96px;
+  line-height: 96px;
+  font-weight: 600;
+}
+.error-page a {
+  text-decoration: underline;
+}
+
 header {
   display: flex;
   justify-content: space-between;
