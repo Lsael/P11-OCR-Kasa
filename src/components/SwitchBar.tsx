@@ -11,17 +11,19 @@ const SwitchBar = ({ title }: { title: string }) => {
         const box:HTMLElement = document.querySelector(".switchBar__" + title + "+ .box")!
         if(arrowState === true) {
             icone.style.transform = "rotate(0deg)";
-            box.style.display = "none"
+            box.style.visibility = "hidden"
+            box.style.height = "0"
         } else {
             icone.style.transform = "rotate(180deg)";
-            box.style.display = "block"
+            box.style.visibility = "visible";
+            box.style.height = "80%"
         }
     }, [arrowState, title])
 
     return(
-        <div className={"switchBar switchBar__" + title}>
+        <div className={"switchBar switchBar__" + title} onClick={switchOnClick}>
             <h2>{title}</h2>
-            <img src={arrow} alt="" className={"arrow arrow__" + title} onClick={switchOnClick} />
+            <img src={arrow} alt="" className={"arrow arrow__" + title}  />
         </div>
     )
 }

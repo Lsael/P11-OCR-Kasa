@@ -19,4 +19,24 @@
 
 .standard-box {
     margin-bottom: 20px;
+    cursor: pointer;
+}
+
+@media screen and (min-width:768px) {
+    .switchBar {
+        border-radius: 10px;
+        padding: 15px 20px;
+    }
+    .productPage__boxes {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 20px;
+        .standard-box {
+            width: 47%;
+            height: auto;
+            .box {
+                font-size: 18px;
+            }
+        }
+    }
 }
