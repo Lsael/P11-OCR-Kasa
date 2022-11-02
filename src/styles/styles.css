@@ -14,26 +14,54 @@ a {
 }
 
 body {
-  max-width: 375px;
-  margin: auto;
   padding: 20px;
   border: 2px solid gray;
   font-family: "Montserrat", sans-serif;
   color: #FF6060;
   line-height: 140%;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 h1, h2 {
   font-weight: 400;
 }
 
+@media screen and (min-width: 992px) {
+  section, header {
+    max-width: 1240px;
+  }
+}
 .home {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
 }
 
+.thumbnails__Box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 768px) {
+  .home div {
+    margin-top: 43px;
+  }
+  .home .thumbnails__Box {
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #F6F6F6;
+    padding: 56px 50px;
+    border-radius: 25px;
+  }
+  .home .thumbnails__Box h3 {
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
 .productPage__title h1 {
   font-size: 18px;
   font-weight: 600;
@@ -112,13 +140,27 @@ header ul {
 }
 header ul li {
   margin: 5px;
-  text-transform: uppercase;
   font-size: 12px;
 }
 header ul .active {
   text-decoration: underline;
 }
 
+@media screen and (min-width: 992px) {
+  header img {
+    width: 210px;
+    height: 68px;
+  }
+  header ul li {
+    margin-left: 57px;
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 991px) {
+  header ul li {
+    text-transform: uppercase;
+  }
+}
 footer {
   display: flex;
   flex-direction: column;
@@ -173,10 +215,21 @@ footer {
 .home__banner {
   height: 15vh !important;
 }
+@media screen and (min-width: 992px) {
+  .home__banner {
+    width: 100%;
+    font-size: 32px;
+    height: 220px !important;
+    border-radius: 25px;
+  }
+  .home__banner h2 {
+    text-align: center;
+  }
+}
 
 .Thumb {
   width: 90%;
-  max-width: 340px;
+  max-width: 90vw;
   margin: 10px auto;
   border-radius: 10px;
   overflow: hidden;
@@ -208,6 +261,14 @@ footer {
   padding: 10px;
 }
 
+@media screen and (min-width: 768px) {
+  .Thumb {
+    max-width: 340px;
+  }
+  .Thumb img {
+    aspect-ratio: 1;
+  }
+}
 .slider {
   width: 100%;
   height: 40vh;

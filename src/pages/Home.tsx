@@ -10,8 +10,9 @@ const Home = () => {
       <section className='home'>
         <div className="banner home__banner">
           <img src={homeBanner} alt="Montagnes embrumées" />
-          <h2>Chez vous,<br/> partout et ailleurs</h2>
+          <h2>Chez vous, partout et ailleurs</h2>
         </div>
+        <div className="thumbnails__Box">
         {
           products.map((productDatas:productDatas) => {
             return(
@@ -19,6 +20,7 @@ const Home = () => {
             )
           })
         }
+        </div>
       </section>
     </Layout>
   )

@@ -36,4 +36,13 @@
 
 .home__banner {
     height: 15vh !important;
+    @media screen and (min-width:992px) {
+        width: 100%;
+        font-size: 32px;
+        height: 220px !important;
+        border-radius: 25px;
+        h2 {
+            text-align: center;
+        }
+    }
 }

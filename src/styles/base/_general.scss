@@ -11,16 +11,22 @@ a {
 }
 
 body {
-    max-width: 375px;
-    margin: auto;
     padding: 20px;
     border: 2px solid gray;
     font-family: $monserrat;
     color: $red-basic;
     line-height: 140%;
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 h1,h2 {
     font-weight: 400;
+}
+
+@media screen and (min-width:992px) {
+    section, header {
+        max-width: 1240px;
+    }
 }
