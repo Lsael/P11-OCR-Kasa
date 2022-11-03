@@ -17,8 +17,10 @@ body {
     color: $red-basic;
     line-height: 140%;
     position: relative;
-    display: flex;
-    justify-content: center;
+}
+
+section {
+    margin: auto;
 }
 
 h1,h2 {

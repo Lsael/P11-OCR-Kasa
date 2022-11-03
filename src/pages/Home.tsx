@@ -10,7 +10,7 @@ const Home = () => {
       <section className='home'>
         <div className="banner home__banner">
           <img src={homeBanner} alt="Montagnes embrumées" />
-          <h2>Chez vous, partout et ailleurs</h2>
+          <h2><span> Chez vous,&nbsp;</span><span>partout et ailleurs</span></h2>
         </div>
         <div className="thumbnails__Box">
         {

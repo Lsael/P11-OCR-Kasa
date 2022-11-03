@@ -20,8 +20,10 @@ body {
   color: #FF6060;
   line-height: 140%;
   position: relative;
-  display: flex;
-  justify-content: center;
+}
+
+section {
+  margin: auto;
 }
 
 h1, h2 {
@@ -158,8 +160,7 @@ h1, h2 {
 .error-page {
   width: 100%;
   height: 100vh;
-  position: -webkit-sticky;
-  position: sticky;
+  position: relative;
   display: grid;
   align-items: center;
   text-align: center;
@@ -173,9 +174,22 @@ h1, h2 {
   text-decoration: underline;
 }
 
+@media screen and (min-width: 992px) {
+  .error-page h1 {
+    font-size: 288px;
+    line-height: 288px;
+  }
+  .error-page p {
+    font-size: 36px;
+  }
+  .error-page a {
+    font-size: 18px;
+  }
+}
 header {
   display: flex;
   justify-content: space-between;
+  margin: auto;
 }
 header ul {
   display: flex;
@@ -233,17 +247,22 @@ footer {
   width: 100%;
   height: 100%;
 }
-.banner h2 {
+
+.home__banner {
+  height: 110px;
+}
+.home__banner h2 {
   position: absolute;
   width: 100%;
   height: 100%;
-  display: grid;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 10px;
   color: white;
   z-index: 10;
 }
-.banner h2::before {
+.home__banner h2::before {
   position: absolute;
   content: "";
   top: 0;
@@ -254,10 +273,6 @@ footer {
   opacity: 0.3;
   z-index: -1;
 }
-
-.home__banner {
-  height: 15vh !important;
-}
 @media screen and (min-width: 992px) {
   .home__banner {
     width: 100%;
@@ -266,7 +281,8 @@ footer {
     border-radius: 25px;
   }
   .home__banner h2 {
-    text-align: center;
+    align-items: center;
+    flex-direction: row;
   }
 }
 
@@ -346,7 +362,7 @@ footer {
   .slider {
     height: 415px;
   }
-  .arrow {
+  .slider .arrow {
     width: 96px;
   }
 }
