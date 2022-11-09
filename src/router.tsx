@@ -1,23 +1,24 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, Navigate } from 'react-router-dom';
 import { ErrorPage } from './pages/ErrorPage';
 import Home from './pages/Home'
 import About from './pages/About';
-import Lodging from './pages/Product';
+import Product from './pages/Product';
 
 export const router = createBrowserRouter([
     {
       path: "/",
-      element: <Home />,
+      element: <Navigate to='accueil' />,
       errorElement: <ErrorPage />,
     },
     {
       path: "accueil",
       element: <Home />,
       errorElement: <ErrorPage />,
+      index: true
     },
     {
       path: "logements/:id",
-      element: <Lodging />,
+      element: <Product />,
       errorElement: <ErrorPage />
     },
     {

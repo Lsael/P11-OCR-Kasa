@@ -6,7 +6,7 @@ import emptyStar from '../assets/star_rate-24px 2.svg'
 import Layout from './Layout';
 import SwitchBar from '../components/SwitchBar';
 
-const Lodging = () => {
+const Product = () => {
     const id = window.location.href.split('/logements/')[1];
     let product!:productDatas;
 
@@ -69,4 +69,4 @@ const Lodging = () => {
 }
 
 
-export default Lodging
+export default Product
