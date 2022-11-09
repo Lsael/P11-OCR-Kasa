@@ -15,7 +15,6 @@ const Product = () => {
             product = products[i]
         }
     }
-    
     return(
         <Layout>
             <section className='product'>

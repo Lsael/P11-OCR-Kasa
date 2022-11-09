@@ -1,10 +1,7 @@
-import { Link, useRouteError } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Layout from "./Layout";
 
 export const ErrorPage = () => {
-  const error:any = useRouteError();
-
-  if(error.status === 404) {
     return (
       <Layout>
         <div className="error-page">
@@ -16,20 +13,4 @@ export const ErrorPage = () => {
         </div>
       </Layout>
       );
-  } else {
-    return (
-      <Layout>
-        <div className="error-page">
-          <div>
-            <h1>Oops!</h1>
-            <p>Sorry, an unexpected error has occurred.</p>
-            <p>
-              <i>{error.statusText || error.message}</i>
-            </p>
-          </div>
-          <Link to="/accueil">Retourner sur la page d’accueil</Link>
-        </div>
-      </Layout>
-    );
-  }
 }
