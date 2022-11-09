@@ -7,8 +7,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 13px;
-    padding: 5px 10px;
+    padding: 5px 12px;
+    h2 {
+        font-size: 13px;
+    }
+    img {
+        height: 18px;
+        width: 18px;
+    }
 }
 
 .box {
@@ -20,12 +26,23 @@
 .standard-box {
     margin-bottom: 20px;
     cursor: pointer;
+    p, ul {
+        line-height: 140%;
+        font-size: 12px;
+    }
 }
 
 @media screen and (min-width:768px) {
     .switchBar {
         border-radius: 10px;
         padding: 15px 20px;
+        h2 {
+            font-size: 18px;
+        }
+        img {
+            height: 32px;
+            width: 32px;
+        }
     }
     .productPage__boxes {
         display: flex;
@@ -36,6 +53,7 @@
             height: auto;
             .box {
                 font-size: 18px;
+                padding: 20px;
             }
         }
     }

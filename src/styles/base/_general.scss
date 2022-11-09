@@ -11,24 +11,34 @@ a {
 }
 
 body {
-    padding: 20px;
-    border: 2px solid gray;
+    padding: 0 10px;
     font-family: $monserrat;
     color: $red-basic;
     line-height: 140%;
     position: relative;
 }
 
+.layout {
+    margin: 10px;
+}
+
 section {
     margin: auto;
+}
+
+section, header {
+    max-width: 1240px;
 }
 
 h1,h2 {
     font-weight: 400;
 }
 
-@media screen and (min-width:992px) {
-    section, header {
-        max-width: 1240px;
+@media screen and (min-width:768px) {
+    body {
+        padding: 20px;
+    }
+    .layout {
+        margin: 20px 60px;
     }
 }

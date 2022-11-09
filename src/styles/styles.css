@@ -14,25 +14,35 @@ a {
 }
 
 body {
-  padding: 20px;
-  border: 2px solid gray;
+  padding: 0 10px;
   font-family: "Montserrat", sans-serif;
   color: #FF6060;
   line-height: 140%;
   position: relative;
 }
 
+.layout {
+  margin: 10px;
+}
+
 section {
   margin: auto;
+}
+
+section, header {
+  max-width: 1240px;
 }
 
 h1, h2 {
   font-weight: 400;
 }
 
-@media screen and (min-width: 992px) {
-  section, header {
-    max-width: 1240px;
+@media screen and (min-width: 768px) {
+  body {
+    padding: 20px;
+  }
+  .layout {
+    margin: 20px 60px;
   }
 }
 .home {
@@ -42,6 +52,7 @@ h1, h2 {
 }
 
 .thumbnails__Box {
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -55,7 +66,8 @@ h1, h2 {
     flex-direction: row;
     flex-wrap: wrap;
     background-color: #F6F6F6;
-    padding: 56px 50px;
+    padding-bottom: 40px;
+    margin-bottom: 10px;
     border-radius: 25px;
   }
   .home .thumbnails__Box h3 {
@@ -157,6 +169,16 @@ h1, h2 {
     font-size: 18px;
   }
 }
+@media screen and (min-width: 768px) {
+  .about .standard-box {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .about .standard-box h2, .about .standard-box p {
+    font-size: 24px;
+  }
+}
 .error-page {
   width: 100%;
   height: 100vh;
@@ -168,10 +190,11 @@ h1, h2 {
 .error-page h1 {
   font-size: 96px;
   line-height: 96px;
-  font-weight: 600;
+  font-weight: 700;
 }
 .error-page a {
   text-decoration: underline;
+  align-self: flex-start;
 }
 
 @media screen and (min-width: 992px) {
@@ -233,7 +256,7 @@ footer {
 }
 
 .banner {
-  width: 90%;
+  width: 100%;
   height: 40vh;
   margin: 20px auto;
   border-radius: 10px;
@@ -287,11 +310,10 @@ footer {
 }
 
 .Thumb {
-  width: 90%;
-  max-width: 90vw;
-  margin: 10px auto;
+  width: 100%;
   border-radius: 10px;
   overflow: hidden;
+  margin: 10px auto;
 }
 .Thumb article {
   display: flex;
@@ -300,6 +322,7 @@ footer {
   position: relative;
 }
 .Thumb article::before {
+  border-radius: 10px;
   position: absolute;
   content: "";
   top: 0;
@@ -318,14 +341,25 @@ footer {
   color: white;
   position: absolute;
   padding: 10px;
+  font-weight: 400;
+  font-size: 18px;
 }
 
 @media screen and (min-width: 768px) {
   .Thumb {
-    max-width: 340px;
+    width: 48%;
+    padding: 0 20px;
+    padding-top: 40px;
+    overflow: hidden;
   }
   .Thumb img {
+    border-radius: 10px;
     aspect-ratio: 1;
+  }
+}
+@media screen and (min-width: 992px) {
+  .Thumb {
+    width: 32%;
   }
 }
 .slider {
@@ -374,8 +408,14 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 5px 12px;
+}
+.switchBar h2 {
   font-size: 13px;
-  padding: 5px 10px;
+}
+.switchBar img {
+  height: 18px;
+  width: 18px;
 }
 
 .box {
@@ -388,11 +428,22 @@ footer {
   margin-bottom: 20px;
   cursor: pointer;
 }
+.standard-box p, .standard-box ul {
+  line-height: 140%;
+  font-size: 12px;
+}
 
 @media screen and (min-width: 768px) {
   .switchBar {
     border-radius: 10px;
     padding: 15px 20px;
+  }
+  .switchBar h2 {
+    font-size: 18px;
+  }
+  .switchBar img {
+    height: 32px;
+    width: 32px;
   }
   .productPage__boxes {
     display: flex;
@@ -405,5 +456,6 @@ footer {
   }
   .productPage__boxes .standard-box .box {
     font-size: 18px;
+    padding: 20px;
   }
 }/*# sourceMappingURL=styles.css.map */
