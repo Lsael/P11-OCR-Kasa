@@ -10,11 +10,11 @@ const SwitchBar = ({ title }: { title: string }) => {
         const icone:HTMLElement = document.querySelector(".switchBar__" + title + "> img")!
         const box:HTMLElement = document.querySelector(".switchBar__" + title + "+ .box")!
         if(arrowState === true) {
-            icone.style.transform = "rotate(0deg)";
+            icone.style.transform = "rotate(-90deg)";
             box.style.visibility = "hidden"
             box.style.height = "0"
         } else {
-            icone.style.transform = "rotate(180deg)";
+            icone.style.transform = "rotate(90deg)";
             box.style.visibility = "visible";
             box.style.height = "80%"
         }

@@ -18,11 +18,12 @@
 
 .arrow {
     cursor: pointer;
+    width: 24px;
     &__left {
-        transform: rotate(90deg);
+        transform: rotate(0deg);
     }
     &__right {
-        transform: rotate(270deg);
+        transform: rotate(180deg);
         justify-self: flex-end;
     }
 }

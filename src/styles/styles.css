@@ -383,12 +383,13 @@ footer {
 
 .arrow {
   cursor: pointer;
+  width: 24px;
 }
 .arrow__left {
-  transform: rotate(90deg);
+  transform: rotate(0deg);
 }
 .arrow__right {
-  transform: rotate(270deg);
+  transform: rotate(180deg);
   justify-self: flex-end;
 }
 
