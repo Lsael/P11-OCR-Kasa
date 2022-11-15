@@ -1,13 +1,18 @@
 import SwitchBar from "../components/SwitchBar";
 import Layout from "./Layout"
 import aboutBanner from "../assets/about-banner.png"
+import aboutBannerMobil from "../assets/about-banner-mobil.png"
+
 
 const About = () => {
     return (
       <Layout>
         <section className="about">
-          <div className="banner">
-            <img src={aboutBanner} alt="" />
+          <div className="banner banner__about">
+            <picture>
+              <source media="(max-width: 550px)" srcSet={aboutBannerMobil}/>
+              <img src={aboutBanner} alt="" />
+            </picture>
           </div>
           <div className="standard-box">
             <SwitchBar title="Fiabilité" />

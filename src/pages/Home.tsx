@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <Layout>
       <section className='home'>
-        <div className="banner home__banner">
+        <div className="banner banner__home">
           <img src={homeBanner} alt="Montagnes embrumées" />
           <h2><span> Chez vous,&nbsp;</span><span>partout et ailleurs</span></h2>
         </div>
