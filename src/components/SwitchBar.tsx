@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import arrow from '../assets/arrow_back_ios-24px 2.png'
 
 const SwitchBar = ({ title }: { title: string }) => {
-    const [arrowState, setArrowState] = useState(false);
+    const [arrowState, setArrowState] = useState(true);
     const switchOnClick = () => {
         setArrowState(arrowState ? false : true) 
     } 
