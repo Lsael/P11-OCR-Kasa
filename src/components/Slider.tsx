@@ -26,14 +26,23 @@ const Slider = (images:productImages) => {
         setPageIn(`${imageIndex + 1}/${covers.length}`)
     },[imageIndex,covers.length])
 
-    return(
-        <div className="slider">
-            <img src={covers[imageIndex]} alt="logement" />
-            <img src={arrow} alt="" className='arrow arrow__left' onClick={() => slideLeft()}/>
-            <p className="pagin">{pagin}</p>
-            <img src={arrow} alt="" className='arrow arrow__right' onClick={() => slideRight()}/>
-        </div>
-    )
+    if(covers.length > 1) {
+        return(
+            <div className="slider">
+                <img src={covers[imageIndex]} alt="logement" />
+                <img src={arrow} alt="" className='arrow arrow__left' onClick={() => slideLeft()}/>
+                <p className="pagin">{pagin}</p>
+                <img src={arrow} alt="" className='arrow arrow__right' onClick={() => slideRight()}/>
+            </div>
+        )
+    }
+    else {
+        return(
+            <div className="slider">
+                <img src={covers[imageIndex]} alt="logement" />
+            </div>
+        )
+    }
 }
 
 export default Slider
