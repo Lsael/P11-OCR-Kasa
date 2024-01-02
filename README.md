@@ -8,4 +8,3 @@ To test it, clone the repo then :
 npm install
 npm run start
 ```
-# P11-Kasa
