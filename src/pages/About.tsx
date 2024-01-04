@@ -3,7 +3,6 @@ import Layout from "./Layout"
 import aboutBanner from "../assets/about-banner.png"
 import aboutBannerMobil from "../assets/about-banner-mobil.png"
 
-
 const About = () => {
     return (
       <Layout>

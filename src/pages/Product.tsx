@@ -5,9 +5,10 @@ import fullStar from '../assets/star_rate-24px 5.svg'
 import emptyStar from '../assets/star_rate-24px 2.svg'
 import Layout from './Layout';
 import SwitchBar from '../components/SwitchBar';
+import { useParams } from 'react-router-dom';
 
 const Product = () => {
-    const id = window.location.href.split('/logements/')[1];
+    const { id } = useParams()
     let product!:productDatas;
 
     for(let i=0; i < products.length; i++) {
