@@ -25,3 +25,8 @@ export interface productImages {
     images: string[]
 }
 
+export interface bannerProps {
+    src: string,
+    alt: string,
+    text?: string
+}
